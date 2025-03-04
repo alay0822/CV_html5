@@ -33,9 +33,12 @@
       <p>Christian Samaritan School Divisoria Branch.</p>
     </section>
 
+    <!-- Updated Courses Section -->
     <section id="courses">
       <h2>Courses</h2>
-      <div id="courses-list"></div>
+      <div id="courses-list">
+        <!-- Courses will be dynamically loaded here by JavaScript -->
+      </div>
     </section>
 
     <section id="skills">
@@ -64,27 +67,7 @@
     <p>&copy; 2025 Alyza Shane C. Lumay Curriculum Vitae</p>
   </footer>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      fetch("courses.json") // Make sure the path is correct
-        .then(response => response.json())
-        .then(data => {
-          const coursesList = document.getElementById("courses-list");
-          data.courses.forEach(course => {
-            const courseItem = document.createElement("div");
-            courseItem.classList.add("course-item");
-            courseItem.innerHTML = `
-              <p><strong>Year Level:</strong> ${course.year_level}</p>
-              <p><strong>Semester:</strong> ${course.sem}</p>
-              <p><strong>Code:</strong> ${course.code}</p>
-              <p><strong>Description:</strong> ${course.description}</p>
-              <p><strong>Credit:</strong> ${course.credit}</p>
-            `;
-            coursesList.appendChild(courseItem);
-          });
-        })
-        .catch(error => console.error('Error fetching the JSON data:', error));
-    });
-  </script>
+  <!-- JavaScript to load the courses from JSON -->
+  <script src="script.js"></script>
 </body>
 </html>
