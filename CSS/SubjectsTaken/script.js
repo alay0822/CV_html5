@@ -1,5 +1,5 @@
 // Fetch the JSON file containing the course data from GitHub Pages
-fetch('https://alay0822.github.io/CV_html5/main/CSS/courses.json')
+fetch('https://raw.githubusercontent.com/alay0822/CV_html5/main/CSS/courses.json')
   .then(response => response.json()) // Parse the JSON response
   .then(data => {
     const coursesList = document.getElementById('courses-list');
