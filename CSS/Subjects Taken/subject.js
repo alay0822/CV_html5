@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    fetch("https://your-github-username.github.io/your-repo-name/courses.json")
+    fetch("https://alay0822.github.io/CV_html5/courses.json")
       .then(response => response.json())
       .then(data => {
         const coursesList = document.getElementById("courses-list");
